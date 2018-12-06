@@ -1,0 +1,23 @@
+p
+
+{
+
+    font-size: 14px; /* Paragraphes de 14 pixels */
+
+}
+
+h1
+
+{
+
+    font-size: 40px; /* Titres de 40 pixels */
+
+}
+
+div
+
+{
+	 	height:800px;
+	 	width: 120%;
+	 	background-color: gray;
+}
