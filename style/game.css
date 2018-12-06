@@ -11,10 +11,7 @@ h1
 {
 
     font-size: 40px; /* Titres de 40 pixels */
-    	margin-top: auto;
-	 	margin-bottom: auto;
-	 	margin-right: auto;
-	 	margin-left: auto;
+    text-align: center;
 }
 
 div
@@ -23,8 +20,8 @@ div
 	 	height:600px;
 	 	width: 60%;
 	 	background-color: gray;
-	 	margin-top: auto;
-	 	margin-bottom: auto;
+	 	margin-top: 100;
+	 	margin-bottom: 100;
 	 	margin-right: auto;
 	 	margin-left: auto;
 }
