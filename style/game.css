@@ -20,4 +20,8 @@ div
 	 	height:600px;
 	 	width: 60%;
 	 	background-color: gray;
+	 	margin-top: auto;
+	 	margin-bottom: auto;
+	 	margin-right: auto;
+	 	margin-left: auto;
 }
