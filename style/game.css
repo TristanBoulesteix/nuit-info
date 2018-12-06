@@ -3,7 +3,7 @@ p
 {
 
     font-size: 14px; /* Paragraphes de 14 pixels */
-
+    text-align: center;
 }
 
 h1
@@ -12,7 +12,15 @@ h1
 
     font-size: 40px; /* Titres de 40 pixels */
     text-align: center;
-    color: green;
+    color: red;
+}
+
+h2
+
+{
+	font-size: 30px;
+    text-align: center;
+    color: blue;
 }
 
 div
