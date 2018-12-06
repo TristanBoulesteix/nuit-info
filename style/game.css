@@ -11,7 +11,10 @@ h1
 {
 
     font-size: 40px; /* Titres de 40 pixels */
-
+    	margin-top: auto;
+	 	margin-bottom: auto;
+	 	margin-right: auto;
+	 	margin-left: auto;
 }
 
 div
