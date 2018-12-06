@@ -3,6 +3,7 @@ p
 
     font-size: 14px; /* Paragraphes de 14 pixels */
     text-align: center;
+    color: white;
 }
 
 h1
@@ -20,7 +21,7 @@ h2
     color: orange;
 }
 
-div
+#gameArea
 {
 	 	height:600px;
 	 	width: 60%;
@@ -30,4 +31,21 @@ div
 	 	margin-right: auto;
 	 	margin-left: auto;
 	 	border-style: groove;
+}
+
+#rulesdiv
+{
+	height:100px;
+	 	width: 100%;
+	 	background-color: orange;
+	 	margin-top: 30px;
+	 	margin-bottom: 100px;
+	 
+	 	
+}
+
+body
+{
+	height:100%;
+	width: 100%;
 }
