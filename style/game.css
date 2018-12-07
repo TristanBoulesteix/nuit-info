@@ -1,23 +1,21 @@
 p, ul {
 
-    font-size: 120%; /* Paragraphes de 14 pixels */
-    text-align: center;
-    color: white;
+	font-size: 120%; /* Paragraphes de 14 pixels */
+	text-align: center;
+	color: white;
 }
 
-h1
-{
+h1 {
 
-    font-size: 300%; /* Titres de 40 pixels */
-    text-align: center;
-    color: orange;
+	font-size: 300%; /* Titres de 40 pixels */
+	text-align: center;
+	color: orange;
 }
 
-h2
-{
+h2 {
 	font-size: 200%;
-    text-align: center;
-    color: orange;
+	text-align: center;
+	color: orange;
 }
 
 canvas {
@@ -28,23 +26,20 @@ canvas {
 	margin-right: 20%;
 	margin-left: 20%;
 	border-style: groove;
+	background-image: url("../File/Vipi/DIVALTO_01.jpg");
 }
 
-#rulesdiv
-{
+#rulesdiv {
 	padding-top: 1%;
 	padding-bottom: 1%;
 	height:1%;
 	width: 100%;
 	background-color: orange;
 	margin-top: 0.5%;
-	margin-bottom: 1%;
-	 
-	 	
+	margin-bottom: 1%;	 	
 }
 
-body
-{
+body {
 	overflow-x: hidden;
 	height:100%;
 	width: 100%;

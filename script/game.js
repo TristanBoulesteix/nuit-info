@@ -2,19 +2,22 @@ var background;
 
 function startGame() {
 	background = new component(656, 270, "../File/img/Background/jungle.jpg", 0, 0);
-	gameArea.start();
+	gameArea.initialize();
+	$(gameArea.canvas).click(gameArea.start());
 }
 
 var gameArea = {
 	canvas : document.createElement("canvas"),
-	start : function() {
+	initialize : function() {
 		this.canvas.width = 480;
 		this.canvas.height = 270;
 		this.context = this.canvas.getContext("2d");
 		document.body.insertBefore(this.canvas, document.getElementById("subTitle"));
 		this.frameNo = 0;
-		this.interval = setInterval(updateGameArea, 20);
 		},
+	start : function() {
+		this.interval = setInterval(updateGameArea, 6);
+	},
 	clear : function() {
 		this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 	},
@@ -34,10 +37,6 @@ function component(width, height, color, x, y) {
 	this.y = y;    
 	this.update = function() {
 		ctx = gameArea.context;
-		this.image.onload =function() {
-			ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
-			ctx.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
-		}.bind(this);
 		if (this.image.complete) {
 			ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
 			ctx.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
