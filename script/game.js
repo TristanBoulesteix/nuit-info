@@ -2,7 +2,7 @@ $(window).on('load', function() {
 	startGame();
 });
 
-var backgroundSrc = './File/img/Background/desert.png';
+var backgroundSrc = 'File/img/Background/desert.png';
 var background;
 
 var gameArea = {
@@ -31,12 +31,11 @@ function Background() {
 	this.width = $(gameArea.canvas).css('width');
 	this.height = $(gameArea.canvas).css('height');
 	this.speedX = 0;
-	this.speedY = 0;    
+	this.speedY = 0;
 	this.x = 0;
 	this.y = 0;
 	this.update = function() {
 		currentContext = gameArea.context;
-		currentContext.drawImage(this.image, this.x, this.y, this.width, this.height);
 		currentContext.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
 	}
 	this.setNewPosition = function() {

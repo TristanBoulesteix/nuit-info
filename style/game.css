@@ -29,7 +29,7 @@ h2
 	 	margin-bottom: 4%;
 	 	margin-right: 20%;
 	 	margin-left: 20%;
-	 	border-style: groove;
+		border-style: groove;
 }
 
 #rulesdiv
@@ -37,10 +37,10 @@ h2
 	padding-top: 1%;
 	padding-bottom: 1%;
 	height:1%;
-	 	width: 100%;
-	 	background-color: orange;
-	 	margin-top: 0.5%;
-	 	margin-bottom: 1%;
+	width: 100%;
+	background-color: orange;
+	margin-top: 0.5%;
+	margin-bottom: 1%;
 	 
 	 	
 }
