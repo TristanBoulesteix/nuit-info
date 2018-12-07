@@ -35,6 +35,7 @@ function Background() {
 	this.x = 0;
 	this.y = 0;
 	this.update = function() {
+		$('canvas').css('background-image',backgroundSrc);
 		currentContext = gameArea.context;
 		currentContext.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
 	}
