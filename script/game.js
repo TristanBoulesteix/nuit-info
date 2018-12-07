@@ -1,5 +1,3 @@
-
-//var myGamePiece;
 var background;
 
 function startGame() {
