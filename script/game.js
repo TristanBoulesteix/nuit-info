@@ -34,8 +34,14 @@ function component(width, height, color, x, y) {
 	this.y = y;    
 	this.update = function() {
 		ctx = gameArea.context;
-		ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
-		ctx.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
+		this.image.onload =function() {
+			ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+			ctx.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
+		}.bind(this);
+		if (this.image.complete) {
+			ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+			ctx.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
+		}
 	}
 	this.newPos = function() {
 		this.x += this.speedX;
