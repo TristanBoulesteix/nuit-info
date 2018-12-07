@@ -1,17 +1,22 @@
-$(window).on('load', function() {
-	startGame();
-});
 
-var backgroundSrc = 'File/img/Background/desert.png';
+//var myGamePiece;
 var background;
 
+function startGame() {
+	background = new component(656, 270, "../File/img/Background/jungle.jpg", 0, 0);
+	gameArea.start();
+}
+
 var gameArea = {
-	canvas: document.getElementById("gameArea"),
-	start: function() {
+	canvas : document.createElement("canvas"),
+	start : function() {
+		this.canvas.width = 480;
+		this.canvas.height = 270;
 		this.context = this.canvas.getContext("2d");
+		document.body.insertBefore(this.canvas, document.getElementById("subTitle"));
 		this.frameNo = 0;
 		this.interval = setInterval(updateGameArea, 20);
-	},
+		},
 	clear : function() {
 		this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 	},
@@ -20,26 +25,21 @@ var gameArea = {
 	}
 }
 
-function startGame() {
-	background = new Background();
-	gameArea.start();
-}
-
-function Background() {
+function component(width, height, color, x, y) {
 	this.image = new Image();
-	this.image.src = backgroundSrc;
-	this.width = $(gameArea.canvas).css('width');
-	this.height = $(gameArea.canvas).css('height');
+	this.image.src = color;
+	this.width = width;
+	this.height = height;
 	this.speedX = 0;
 	this.speedY = 0;
-	this.x = 0;
-	this.y = 0;
+	this.x = x;
+	this.y = y;    
 	this.update = function() {
-		$('canvas').css('background-image',backgroundSrc);
-		currentContext = gameArea.context;
-		currentContext.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
+		ctx = gameArea.context;
+		ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+		ctx.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
 	}
-	this.setNewPosition = function() {
+	this.newPos = function() {
 		this.x += this.speedX;
 		this.y += this.speedY;
 		if (this.x == -(this.width)) {
@@ -51,6 +51,6 @@ function Background() {
 function updateGameArea() {
 	gameArea.clear();
 	background.speedX = -1;
-	background.setNewPosition();    
+	background.newPos();    
 	background.update();
 }

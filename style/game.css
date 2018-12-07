@@ -1,5 +1,4 @@
-p
-{
+p, ul {
 
     font-size: 120%; /* Paragraphes de 14 pixels */
     text-align: center;
@@ -21,16 +20,14 @@ h2
     color: orange;
 }
 
-#gameArea
-{
-	 	height:8%;
-	 	width: 60%;
-	 	margin-top: 3%;
-	 	margin-bottom: 4%;
-	 	margin-right: 20%;
-	 	margin-left: 20%;
-		border-style: groove;
-		background-image: 'File/img/Background/desert.png';
+canvas {
+	height:8%;
+	width: 60%;
+	margin-top: 3%;
+	margin-bottom: 4%;
+	margin-right: 20%;
+	margin-left: 20%;
+	border-style: groove;
 }
 
 #rulesdiv
